@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lZy-tC-oWm">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Pixel Editor View Controller-->
+        <scene sceneID="Ton-0k-R9g">
+            <objects>
+                <viewController id="lZy-tC-oWm" customClass="PixelEditorViewController" customModule="computer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yxy-LB-aye">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="redraw" id="HuS-OO-3js" customClass="PixelEditor" customModule="computer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="2l5-nP-cjz">
+                                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <subviews>
+                                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Cte-2f-3kT">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <items>
+                                                    <barButtonItem image="BackDown" id="xuG-LM-dxY">
+                                                        <connections>
+                                                            <action selector="done" destination="lZy-tC-oWm" id="XcL-LJ-fTN"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                    <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="JGx-qk-9F3"/>
+                                                    <barButtonItem systemItem="undo" id="Im2-ek-Z1l">
+                                                        <color key="tintColor" red="0.55950844290000001" green="0.55949169399999998" blue="0.55950117109999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="undo" destination="HuS-OO-3js" id="tfR-Wq-I24"/>
+                                                        </connections>
+                                                    </barButtonItem>
+                                                </items>
+                                            </toolbar>
+                                        </subviews>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="doneButton" destination="xuG-LM-dxY" id="oNJ-J8-wDu"/>
+                                    <outlet property="toolbar" destination="Cte-2f-3kT" id="wdU-Av-0hK"/>
+                                    <outlet property="toolbarScrollView" destination="2l5-nP-cjz" id="Ov3-YC-eAU"/>
+                                    <outlet property="undoButton" destination="Im2-ek-Z1l" id="UBJ-CZ-jEG"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="editor" destination="HuS-OO-3js" id="oUm-Jb-UTn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbo-5K-22o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackDown" width="20" height="20"/>
+    </resources>
+</document>

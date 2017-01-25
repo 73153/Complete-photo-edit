@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Qez-SX-0Hq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8xt-kS-a20">
+            <objects>
+                <viewController id="Qez-SX-0Hq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XSx-33-jmc"/>
+                        <viewControllerLayoutGuide type="bottom" id="JWX-aL-DFe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zwS-gt-nws">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmg-Dz-Lte">
+                                <connections>
+                                    <segue destination="XB3-Bt-ygs" kind="embed" id="d1n-C5-lwD"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JWX-aL-DFe" firstAttribute="top" secondItem="xmg-Dz-Lte" secondAttribute="bottom" id="9HA-hL-F5K"/>
+                            <constraint firstItem="xmg-Dz-Lte" firstAttribute="leading" secondItem="zwS-gt-nws" secondAttribute="leading" id="Kcp-yZ-2nv"/>
+                            <constraint firstItem="xmg-Dz-Lte" firstAttribute="top" secondItem="zwS-gt-nws" secondAttribute="top" id="aoC-PD-0MV"/>
+                            <constraint firstAttribute="trailing" secondItem="xmg-Dz-Lte" secondAttribute="trailing" id="c5O-V5-eJo"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6J-O7-Eyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="-336"/>
+        </scene>
+        <!--Sticker Browser View Controller-->
+        <scene sceneID="lTN-Mf-d6o">
+            <objects>
+                <viewController id="XB3-Bt-ygs" customClass="CTStickerBrowserViewController" customModule="stickers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rg3-kS-8iX"/>
+                        <viewControllerLayoutGuide type="bottom" id="il0-CU-4Bi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9a9-vM-044">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpF-8H-Lp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="66"/>
+        </scene>
+    </scenes>
+</document>
